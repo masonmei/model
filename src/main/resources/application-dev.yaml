@@ -1,0 +1,27 @@
+
+spring:
+  datasource:
+    data-source-class-name: com.mysql.jdbc.jdbc2.optional.MysqlDataSource
+    url: jdbc:mysql://localhost:3306/meu?useUnicode=true&characterEncoding=utf8
+    name:
+    username: root
+    password: root
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    database: MYSQL
+    show_sql: true
+    generate-ddl: true
+    properties:
+      hibernate.cache.use_second_level_cache: false
+      hibernate.cache.use_query_cache: false
+      hibernate.generate_statistics: true
+third-party:
+  uuap:
+    app-service-home: http://localhost:8888/
+    cas-service-url: http://localhost:8888/login
+    cas-url-prefix: http://itebeta.baidu.com:8100/
+    cas-url-login: http://itebeta.baidu.com:8100/login
+    cas-url-logout: http://itebeta.baidu.com:8100/logout
+
+server:
+  port: 8888
